@@ -1,5 +1,6 @@
 import React from "react";
 import Avatar from "./Avatar";
+import Detail from "./Detail";
 
 function Card(props) {
   console.log("Card component: props = ", props);
@@ -11,8 +12,9 @@ function Card(props) {
         {/* <img className="circle-img" src={props.imageURL} alt={"image of " + props.contactName}/> */}
       </div>
       <div className="bottom">
-        <p className="info">{props.phoneNumber}</p>
-        <p className="info">{props.email}</p>
+        <Detail phoneNumber={props.phoneNumber} email={props.email}/>
+        {/* <p className="info">{props.phoneNumber}</p>
+        <p className="info">{props.email}</p> */}
       </div>
     </div>
   );
